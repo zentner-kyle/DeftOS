@@ -1,4 +1,5 @@
-: foreach src/*.s |> arm-none-eabi-as %f -o %o |> build/%B.o
+: foreach src/*.S |> arm-none-eabi-gcc -E %f > %o |> build/%g.s
+: foreach src/*.s build/*.s |> arm-none-eabi-as %f -o %o |> build/%B.o
 : src/linker.ld build/*.o |> arm-none-eabi-ld -T src/linker.ld -o %o build/*.o |> build/deft.elf
 : build/deft.elf |> arm-none-eabi-objcopy -O binary %f %o |> build/deft.bin
 : build/deft.elf |> arm-none-eabi-ld %f -Map %o -o /dev/null |> build/deft.map
