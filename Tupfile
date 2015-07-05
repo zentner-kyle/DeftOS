@@ -3,4 +3,5 @@
 : src/linker.ld build/*.o |> arm-none-eabi-ld -T src/linker.ld -o %o build/*.o |> build/deft.elf
 : build/deft.elf |> arm-none-eabi-objcopy -O binary %f %o |> build/deft.bin
 : build/deft.elf |> arm-none-eabi-ld %f -Map %o -o /dev/null |> build/deft.map
+: build/deft.elf |> arm-none-eabi-objdump %f -tSD > %o |> build/deft.elf.dis
 : build/deft.bin |> arm-none-eabi-objdump -b binary --adjust-vma=0x80000000 -m arm -D build/deft.bin > %o |> build/deft.bin.dis
