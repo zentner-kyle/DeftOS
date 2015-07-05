@@ -222,3 +222,4 @@ docs/_build/
 target/
 
 .deps
+.tup
