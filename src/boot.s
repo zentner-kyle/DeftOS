@@ -8,8 +8,8 @@
   .fpu neon
   .arm
 
-.global start
-start:
+.global _start
+_start:
   ldr sp, =stack_start
   /* bl kmain */
   b .

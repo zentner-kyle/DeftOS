@@ -2,7 +2,7 @@ MEMORY {
   ram (wx) : org = 0x80000000, len = 512M
 }
 
-ENTRY(start)
+ENTRY(_start)
 
 SECTIONS {
   .text : { *(.text) } >ram =0xdeadbeef
