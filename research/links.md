@@ -3,3 +3,4 @@
 [rustboot](https://github.com/charliesome/rustboot)
 [AM335x U-Boot User's Guide](http://processors.wiki.ti.com/index.php/AM335x_U-Boot_User%27s_Guide#Booting_the_kernel)
 [AM335x PSP User Guide](http://processors.wiki.ti.com/index.php/AM335x_PSP_User%27s_Guide)
+[BareMetal U-Boot Guide](http://www.cs.sfu.ca/CourseCentral/433/bfraser/other/BareMetalGuide.pdf)

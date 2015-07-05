@@ -1,8 +1,10 @@
 MEMORY {
-  ram (wx) : org = 0x8200000, len = 512M
+  ram (wx) : org = 0x80000000, len = 512M
 }
 
 /* FILL{0xdeadbeef} */
+
+ENTRY(start)
 
 SECTIONS {
   .text : { *(.text) } >ram =0xdeadbeef
