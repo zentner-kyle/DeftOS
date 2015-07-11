@@ -1,8 +1,8 @@
 # uEnv for u-boot on BeagleBone Black
-# Requires host computer to be at 192.168.1.80 and serving download.bin over
-# tftp.
-ipaddr=192.168.1.137
+# Requires host computer to be at 192.168.2.80 and serving download.bin over
+# tftp, which should have it's startup code at 0x80000000.
+ipaddr=192.168.2.81
 loadaddr=0x80000000
-serverip=192.168.1.80
+serverip=192.168.2.80
 bootfile=download.bin
 uenvcmd=tftp ${loadaddr} ${bootfile}; go ${loadaddr}
