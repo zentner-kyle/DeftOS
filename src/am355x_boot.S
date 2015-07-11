@@ -26,10 +26,14 @@ _start:
 
   /* Set the leds. */
   ldr r2, =gpio1_setdataout
-  /* Inner 2. */
-  ldr r1, =0xc00000
-  /* Outer 2. */
-  /* ldr r1, =0x1e00000 */
+  /* USR 0 */
+  ldr r1, =0x200000
+  /* USR 1 */
+  /* ldr r1, =0x400000 */
+  /* USR 2 */
+  /* ldr r1, =0x800000 */
+  /* USR 3 */
+  /* ldr r1, =0x1000000 */
   str r1, [r2]
 
   /* bl kmain */
